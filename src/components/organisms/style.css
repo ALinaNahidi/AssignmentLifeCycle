@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.textfield {
+  max-width: 30rem;
+}
+
+.genderSelector {
+  max-width: 30rem;
+}
+
+.textAndImage {
+  display: flex;
+  justify-content: space-between;
+  max-width: 60rem;
+  margin-left: 15rem;
+  margin-top: 4rem;
+}
