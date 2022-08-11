@@ -1,13 +1,19 @@
 import { Box, CardMedia } from "@mui/material";
 import React from "react";
 import * as images from "../../utils/constants";
-import "./style.css";
-
+import { styled } from "@mui/system";
 
 interface ImageByAgeProps {
   gender?: string;
   age: number;
 }
+
+const ImageComponent = styled("img")({
+  borderRadius: "50%",
+  marginTop: "-3%",
+  width: "300px",
+  height: "300px",
+});
 
 const getByAge = (age: number, gender: any) => {
   if (age <= 12) {
@@ -37,11 +43,8 @@ export default function ImageByAge(props: ImageByAgeProps) {
   const { age, gender = "male" } = props;
 
   return (
-    <CardMedia
-      className="image"
-      component="img"
-      sx={{ width: "300px", height: "300px" }}
+    <ImageComponent
       src={require("../../assets/images/" + getByAge(age, gender))}
-    />
+     />
   );
 }
